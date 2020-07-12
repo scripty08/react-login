@@ -64,7 +64,7 @@ Registration      |                                                             
 
 # Login Properties
 
-Property                           | Type        |  Default  |
+Property                           | Type        |  Default / Description  |
 -----------------------------------|------------ |-----------
 title (optional)                   | String      | Login
 width (optional)                   | number      | 100%
@@ -72,6 +72,7 @@ onLoginSubmit (required)           | Function    |
 onRegisterSubmit (optional)        | Function    |
 onForgotUsernameSubmit (optional)  | Function    |
 onForgotPasswordSubmit (optional)  | Function    |
+onPasswordReset (optional)         | Function    | url params :userId and :token needed. returns token, userId and new password
 loginPath (optional)               | String      | /login
 registerPath (optional)            | String      | /register
 
