@@ -80,6 +80,7 @@ registerPath (optional)            | String      | /register
 
 Property                     | Type           |  Default  |
 ---------------------------- |--------------- |-----------
+registerPath (optional)      | String         | /register
 title (optional)             | String         | Register
 onRegisterSubmit (required)  | Function       |
 children (optional)          | React Children |
