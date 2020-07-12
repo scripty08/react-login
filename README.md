@@ -1,0 +1,84 @@
+# @scripty/react-login
+
+# Description
+
+lightweight react login component.
+
+![alt text](./login.png "@scripty/react-login")
+
+# Usage
+```bash
+npm install -s @scripty/react-login
+```
+
+##### Client: Example.jsx
+
+```javascript
+import React from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { Login } from '@scripty/react-login';
+
+export const Example = () => {
+
+    const onLoginSubmit = (data) => {
+        const { username, password } = data;
+        console.log(username, password);
+    }
+
+    const onRegisterSubmit = (data) => {
+        const { username, password } = data;
+        console.log(username, password);
+    }
+
+    const onForgotUsernameSubmit = (username) => {
+        console.log(username);
+    }
+
+    const onForgotPasswordSubmit = (password) => {
+        console.log(password);
+    }
+
+    return (
+        <Router>
+            <h2>Login</h2>
+            <Login
+                width={350}
+                onLoginSubmit={onLoginSubmit}
+                onRegisterSubmit={onRegisterSubmit}
+                onForgotUsernameSubmit={onForgotUsernameSubmit}
+                onForgotPasswordSubmit={onForgotPasswordSubmit}
+                loginPath={'/login'}
+                registerPath={'/register'}
+            />
+        </Router>
+    );
+};
+
+```
+# Components
+
+Name              | Features                                                      |
+----------------- |-------------------------------------------------------------- |
+Login             | Reset password, forgot password, forgot username              |
+Registration      |                                                               |
+
+# Login Properties
+
+Property                           | Type        |  Default  |
+-----------------------------------|------------ |-----------
+title (optional)                   | String      | Login
+width (optional)                   | number      | 100%
+onLoginSubmit (required)           | Function    |
+onRegisterSubmit (optional)        | Function    |
+onForgotUsernameSubmit (optional)  | Function    |
+onForgotPasswordSubmit (optional)  | Function    |
+loginPath (optional)               | String      | /login
+registerPath (optional)            | String      | /register
+
+# Registration Properties
+
+Property                     | Type           |  Default  |
+---------------------------- |--------------- |-----------
+title (optional)             | String         | Register
+onRegisterSubmit (required)  | Function       |
+children (optional)          | React Children |
