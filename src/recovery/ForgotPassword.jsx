@@ -21,13 +21,14 @@ export const ForgotPassword = (props) => {
         <form id={'forgot-password'} onSubmit={handleSubmit}>
             <Card title={title}>
                 <Input
+                    style={{width: '96%'}}
                     placeholder={'Username'}
                     name={'username'}
                     helpLink={forgotUsernameLink}
                     onChange={(name, value) => setPassword(value)}
                 />
-
-                <Button>Send</Button>
+                <br />
+                <Button color={'#1F517F'}>Login</Button>
             </Card>
         </form>
     );

@@ -30,17 +30,20 @@ export const ResetPassword = (props) => {
         <form id={'reset-password'} onSubmit={handleSubmit}>
             <Card title={title}>
                 <Input
+                    style={{width: '96%'}}
                     placeholder={'New Password'}
                     name={'password'}
                     onChange={(name, value) => setPassword(value)}
                 />
-
+                <br />
                 <Input
+                    style={{width: '96%'}}
                     placeholder={'Repeat Password'}
                     name={'password-repeat'}
                     onChange={(name, value) => setPasswordRepeat(value)}
                 />
-                <Button>Send</Button>
+                <br />
+                <Button color={'#1F517F'}>Login</Button>
             </Card>
         </form>
     );

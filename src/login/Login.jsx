@@ -43,8 +43,9 @@ export const Login = (props) => {
                     onChange={(name, value) => setUsername(value)}
                     helpLink={forgotUsernameLink}
                     value={username}
+                    style={{width: '96%'}}
                 />
-
+                <br />
                 <Input
                     placeholder={'Password'}
                     name={'password'}
@@ -52,9 +53,10 @@ export const Login = (props) => {
                     onChange={(name, value) => setPassword(value)}
                     helpLink={forgotPasswordLink}
                     value={password}
+                    style={{width: '96%'}}
                 />
-
-                <Button>Login</Button>
+                <br />
+                <Button color={'#1F517F'}>Login</Button>
 
                 <span className={'no-account-link'}>{forgotRegisterLink}</span>
             </Card>

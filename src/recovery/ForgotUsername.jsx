@@ -17,12 +17,13 @@ export const ForgotUsername = (props) => {
         <form id={'login'} onSubmit={handleSubmit}>
             <Card title={title}>
                 <Input
+                    style={{width: '96%'}}
                     placeholder={'Email'}
                     name={'email'}
                     onChange={(name, value) => setUsername(value)}
                 />
-
-                <Button>Send</Button>
+                <br />
+                <Button color={'#1F517F'}>Login</Button>
             </Card>
         </form>
     );
